@@ -33,22 +33,31 @@ export const portfolioData = {
       link: "https://github.com/Mosope16/dove-tv-portal"
     },
     {
-      id: "campus-eats",
-      title: "Campus Eats",
-      description: "A full-stack food delivery application designed for university campuses, featuring real-time order tracking and vendor management.",
-      category: "Web",
-      tech: ["Next.js", "React Native", "TypeScript", "Supabase"],
+      id: "jarvis",
+      title: "Jarvis (AI Voice Assistant)",
+      description: "An intelligent voice-controlled desktop assistant featuring real-time speech recognition, LLM intelligence, OS task automation, and a custom UI.",
+      category: "Systems",
+      tech: ["Python", "CustomTkinter", "OpenAI API", "SpeechRecognition", "PyAutoGUI"],
       image: "/api/placeholder/600/400",
-      link: "#"
+      link: "https://github.com/Mosope16/Jarvis"
     },
     {
-      id: "luxtune",
-      title: "Luxtune (Wave.)",
-      description: "A premium mobile audio player featuring local media library integration, advanced playback controls, and fuzzy search.",
-      category: "Mobile",
-      tech: ["React Native", "Expo", "Zustand", "Track Player"],
+      id: "habit-garden",
+      title: "Habit Garden",
+      description: "A gamified habit tracker that visualizes daily consistency as a growing virtual garden, featuring XP leveling, streak tracking, and interactive analytics.",
+      category: "Web",
+      tech: ["Next.js 15", "React 19", "Supabase", "Tailwind CSS", "TanStack Query"],
       image: "/api/placeholder/600/400",
-      link: "#"
+      link: "https://github.com/Mosope16/habit_garden"
+    },
+    {
+      id: "campus-study-spot-finder",
+      title: "Campus Study Spot Finder",
+      description: "A full-stack campus discovery platform featuring interactive Leaflet maps, live crowd density voting, desk/outlet schematics, and focus timers.",
+      category: "Web",
+      tech: ["Next.js", "TypeScript", "Leaflet", "Tailwind CSS", "Supabase"],
+      image: "/api/placeholder/600/400",
+      link: "https://github.com/Mosope16/campus-study-spot-finder"
     }
   ],
 
@@ -60,8 +69,9 @@ export const portfolioData = {
 
   education: {
     degree: "B.S. Computer Engineering",
-    institution: "Redeemer's University", // Placeholder for user
+    institution: "Redeemer's University",
     graduationYear: "2027",
+    gpa: "",
     coursework: ["Object-Oriented Programming", "Data Structures & Algorithms", "Computer Networks"]
   },
 

@@ -9,7 +9,10 @@ import { portfolioData } from "@/data/portfolio";
 export default function FeaturedProjects() {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "Web", "Mobile", "Systems"];
+  const categories = [
+    "All",
+    ...Array.from(new Set(portfolioData.projects.map((p) => p.category))),
+  ];
 
   const filteredProjects = portfolioData.projects.filter(
     (project) => filter === "All" || project.category === filter
@@ -95,21 +98,33 @@ export default function FeaturedProjects() {
                   <span className="text-xs font-semibold text-accent-cyan tracking-wider uppercase">
                     {project.category}
                   </span>
-                  <div className="flex gap-2">
-                    <a
-                      href={project.link}
-                      className="text-gray-400 hover:text-white transition-colors"
-                      aria-label="GitHub"
-                    >
-                      <FaGithub size={18} />
-                    </a>
-                    <a
-                      href={project.link}
-                      className="text-gray-400 hover:text-white transition-colors"
-                      aria-label="External link"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
+                  <div className="flex items-center gap-2">
+                    {project.link && project.link !== "#" ? (
+                      <>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
+                          aria-label="GitHub"
+                        >
+                          <FaGithub size={18} />
+                        </a>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
+                          aria-label="External link"
+                        >
+                          <ExternalLink size={18} />
+                        </a>
+                      </>
+                    ) : (
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/5 text-gray-400 border border-white/10">
+                        In Progress
+                      </span>
+                    )}
                   </div>
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-2">{project.title}</h3>
