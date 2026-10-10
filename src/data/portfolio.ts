@@ -38,7 +38,7 @@ export const portfolioData = {
       description: "An intelligent voice-controlled desktop assistant featuring real-time speech recognition, LLM intelligence, OS task automation, and a custom UI.",
       category: "Systems",
       tech: ["Python", "CustomTkinter", "OpenAI API", "SpeechRecognition", "PyAutoGUI"],
-      image: "/api/placeholder/600/400",
+      image: "/jarvis.jpg",
       link: "https://github.com/Mosope16/Jarvis"
     },
     {
@@ -47,7 +47,7 @@ export const portfolioData = {
       description: "A gamified habit tracker that visualizes daily consistency as a growing virtual garden, featuring XP leveling, streak tracking, and interactive analytics.",
       category: "Web",
       tech: ["Next.js 15", "React 19", "Supabase", "Tailwind CSS", "TanStack Query"],
-      image: "/api/placeholder/600/400",
+      image: "/habit-garden.png",
       link: "https://github.com/Mosope16/habit_garden"
     },
     {
@@ -56,7 +56,7 @@ export const portfolioData = {
       description: "A full-stack campus discovery platform featuring interactive Leaflet maps, live crowd density voting, desk/outlet schematics, and focus timers.",
       category: "Web",
       tech: ["Next.js", "TypeScript", "Leaflet", "Tailwind CSS", "Supabase"],
-      image: "/api/placeholder/600/400",
+      image: "/campus.png",
       link: "https://github.com/Mosope16/campus-study-spot-finder"
     }
   ],
