@@ -54,15 +54,14 @@ export const portfolioData = {
 
   currentlyBuilding: {
     name: "Attendance Management System",
-    progress: 30, // percentage
-    learning: "Building a digital attendance MVP with React Native, Expo, Supabase, Clerk auth, and NativeWind styling."
+    progress: 100, // percentage
+    learning: "Building a digital attendance MVP with React Native, Expo, Neon, Better Auth, and NativeWind styling."
   },
 
   education: {
     degree: "B.S. Computer Engineering",
     institution: "Redeemer's University", // Placeholder for user
     graduationYear: "2027",
-    gpa: "4.29/5.0",
     coursework: ["Object-Oriented Programming", "Data Structures & Algorithms", "Computer Networks"]
   },
 
