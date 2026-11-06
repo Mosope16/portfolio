@@ -24,13 +24,25 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "operant",
+      title: "Operant CMMS",
+      description: "An enterprise-grade, multi-tenant Computerized Maintenance Management System (CMMS) featuring asset lifecycle tracking, preventive maintenance schedules, interactive work order dispatching, parts inventory, and audit logging.",
+      category: "Web",
+      tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
+      image: "/operant.jpg",
+      link: "https://myoperant.vercel.app/",
+      liveUrl: "https://myoperant.vercel.app/",
+      github: "https://github.com/Mosope16/operant"
+    },
+    {
       id: "dove-tv-portal",
       title: "Dove TV Portal",
       description: "A full-scale broadcast network Operations Management System featuring studio booking, equipment checkout, and shift management.",
       category: "Web",
       tech: ["Next.js", "React", "Tailwind CSS", "Prisma", "PostgreSQL"],
       image: "/dove-tv-portal.png",
-      link: "https://github.com/Mosope16/dove-tv-portal"
+      link: "https://github.com/Mosope16/dove-tv-portal",
+      github: "https://github.com/Mosope16/dove-tv-portal"
     },
     {
       id: "jarvis",

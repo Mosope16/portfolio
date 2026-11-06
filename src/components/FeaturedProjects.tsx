@@ -101,24 +101,38 @@ export default function FeaturedProjects() {
                   <div className="flex items-center gap-2">
                     {project.link && project.link !== "#" ? (
                       <>
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
-                          aria-label="GitHub"
-                        >
-                          <FaGithub size={18} />
-                        </a>
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
-                          aria-label="External link"
-                        >
-                          <ExternalLink size={18} />
-                        </a>
+                        {(("github" in project && Boolean(project.github)) || (project.link && project.link.includes("github.com"))) && (
+                          <a
+                            href={("github" in project && typeof project.github === "string" ? project.github : project.link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
+                            aria-label="GitHub"
+                          >
+                            <FaGithub size={18} />
+                          </a>
+                        )}
+                        {(("liveUrl" in project && Boolean(project.liveUrl)) || (project.link && !project.link.includes("github.com"))) ? (
+                          <a
+                            href={("liveUrl" in project && typeof project.liveUrl === "string" ? project.liveUrl : project.link)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
+                            aria-label="Live Deployed Website"
+                          >
+                            <ExternalLink size={18} />
+                          </a>
+                        ) : (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-400 hover:text-white transition-colors p-1 hover:bg-white/5 rounded-md"
+                            aria-label="External link"
+                          >
+                            <ExternalLink size={18} />
+                          </a>
+                        )}
                       </>
                     ) : (
                       <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/5 text-gray-400 border border-white/10">
